@@ -1,23 +1,31 @@
 {{#poke-card
-onsubmit=attrs.onsubmit
-title="Register"
-buttonText="Register"}}
+    onsubmit=attrs.onsubmit
+    title='Register'
+    buttonText='Register'
+    buttonDisabled=validations.messages.length
+}}
   <div class="row">
     {{poke-input
-    classNames="col s12"
-    type="email"
-    label="Email Address"}}
+        value=model.email
+        errors=validations.attrs.model.email.messages
+        classNames='col s12'
+        type='email'
+        label='Email Address'}}
   </div>
   <div class="row">
     {{poke-input
-    classNames="col s12"
-    type="password"
-    label="Password"}}
+        value=model.password
+        errors=validations.attrs.model.password.messages
+        classNames='col s12'
+        type='password'
+        label='Password'}}
   </div>
   <div class="row">
     {{poke-input
-    classNames="col s12"
-    type="password"
-    label="Confirm Password"}}
+        value=model.passwordConfirmation
+        errors=validations.attrs.model.passwordConfirmation.messages
+        classNames='col s12'
+        type='password'
+        label='Confirm Password'}}
   </div>
 {{/poke-card}}
