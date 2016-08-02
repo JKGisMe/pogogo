@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <div class="col s12 m8 offset-m2">
+      {{#poke-card
+          buttonText='Logout'
+          onsubmit=(route-action 'logout')
+          title='Welcome?'}}
+        {{#user-info as |u|}}
+          You're in, <b>{{u.email}}</b>.
+        {{/user-info}}
+      {{/poke-card}}
+    </div>
+  </div>
+</div>
