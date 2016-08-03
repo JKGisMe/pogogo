@@ -22,10 +22,16 @@ module.exports = function(environment) {
       host: 'http://localhost:4000',
       namespace: 'api'
     },
+
     'ember-simple-auth': {
       authenticationRoute: 'auth.login',
       routeIfAlreadyAuthenticated: 'app.index',
       routeAfterAuthentication: 'app.index'
+    },
+
+    flashMessageDefaults: {
+      timeout: 3000,
+      extendedTimeout: 375
     }
   };
 
